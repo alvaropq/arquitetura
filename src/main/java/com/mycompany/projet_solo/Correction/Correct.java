@@ -1,6 +1,7 @@
 
 package com.mycompany.projet_solo.Correction;
 
+import com.mycompany.projet_solo.Correction.PotassioCorret;
 import java.util.Scanner;
 
 public class Correct {
@@ -123,5 +124,13 @@ public class Correct {
         return num;*/
         return sist;
         
+        
+      
+       
+        
     }
+    double RecuperaPotassio(){
+        System.out.println("Participação do Potássio no CTC: 3,0%");
+        return 0;
  }
+}

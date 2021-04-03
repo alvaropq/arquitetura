@@ -4,7 +4,7 @@ package com.mycompany.projet_solo.Correction;
  *
  * @author meu pc
  */
-public class PotassioCorret {
+public final class PotassioCorret {
         private double participacaoPotassio_ctc;
         private double participacao_desejada;
         private double participacao_aposCorrecao;
@@ -37,7 +37,9 @@ public class PotassioCorret {
             this.sulfato_potassio = sulfato_potassio;
             this.sulfato_potassioMagnesio = sulfato_potassioMagnesio;
 
-            }public double getParticipaCTC(){
+            }
+
+public double getParticipaCTC(){
                 return participacaoPotassio_ctc;
             }
             public double getParticipaDesejada(){
