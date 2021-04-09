@@ -179,4 +179,5 @@ public class Correct {
    }
    double CustoTotalHectare(double CustoPorHectare, double area_talhao){
        return CustoPorHectare * area_talhao;
+    }
 }
