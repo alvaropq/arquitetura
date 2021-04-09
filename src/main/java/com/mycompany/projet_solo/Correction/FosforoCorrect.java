@@ -2,6 +2,7 @@ package com.mycompany.projet_solo.Correction;
 
 public class FosforoCorrect {
    
+        private double area_talhao;
         private double teor_fosforo;
         private double fonte_fosforo;
         private double eficiencia_fosforo;
@@ -21,6 +22,7 @@ public class FosforoCorrect {
 
 
         public FosforoCorrect(
+            double area_talhao,
             double teor_fosforo,
             double fonte_fosforo,
             double eficiencia_fosforo,
@@ -38,7 +40,7 @@ public class FosforoCorrect {
             double fos_Patos_minas,
             double multif_magnesiano) {
 
-
+            this.area_talhao = area_talhao;
             this.teor_fosforo = teor_fosforo;
            this.fonte_fosforo = fonte_fosforo;
            this.eficiencia_fosforo = eficiencia_fosforo;
@@ -55,6 +57,9 @@ public class FosforoCorrect {
             this.fosfato_arad = fosfato_arad;
             this.fos_Patos_minas = fos_Patos_minas;
             this.multif_magnesiano = multif_magnesiano;
+            }
+            public double getTalhao(){
+                return area_talhao;
             }
 
             public double getTeor(){
