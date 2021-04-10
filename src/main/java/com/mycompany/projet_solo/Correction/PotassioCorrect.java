@@ -1,6 +1,7 @@
 package com.mycompany.projet_solo.Correction;
 
 public class PotassioCorrect {
+    private double eficienciaPotassio;
     private double potassioAtualDoSolo;
     private double potassioDesejado;
     private double potassioAposCorrecao;
@@ -11,6 +12,7 @@ public class PotassioCorrect {
     private double sulfatoPotassio_Magnesio;
 
     public PotassioCorrect(
+        double eficienciaPotassio,
         double potassioAtualDoSolo,
         double potassioDesejado,
         double potassioAposCorrecao,
@@ -20,6 +22,7 @@ public class PotassioCorrect {
         double sulfatoPotassio,
         double sulfatoPotassio_Magnesio){
 
+            this.eficienciaPotassio = eficienciaPotassio;
             this.potassioAtualDoSolo = potassioAtualDoSolo;
             this.potassioDesejado = potassioDesejado;
             this.potassioAposCorrecao = potassioAposCorrecao;
@@ -28,6 +31,9 @@ public class PotassioCorrect {
             this.cloretoDePotassio = cloretoDePotassio;
             this.sulfatoPotassio = sulfatoPotassio;
             this.sulfatoPotassio_Magnesio = sulfatoPotassio_Magnesio;
+        }
+        public double getEficiencia(){
+            return eficienciaPotassio;
         }
         public double getPotassioAtual(){
             return potassioAtualDoSolo;

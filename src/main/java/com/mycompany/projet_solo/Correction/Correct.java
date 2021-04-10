@@ -110,25 +110,10 @@ public class Correct {
         } else if (texSolo == 2) {
             System.out.println("De 25 a 40% de Argila");
         }
-        // |||||||||||||||||||||||||||||||==EXERCICIO
-        // 2==||||||||||||||||||||||||||||||||||||||||||
-        /*int num = 0;
-        System.out.println("IR para análise de fosforo ou voltar");
-        System.out.println("1 para análise ou 2 para voltar");
-        switch (num) {
-        case 1:
-            FosforoPotassio();
-            break;
-        default:
-        }
-        return num;*/
-        return sist;
-        
-        
-      
-       
-        
+        return sist;  
     }
+
+    //===============CORREÇÃO E RECUPERAÇÃO DO FOSFORO=========================================================
     double RecuperaPotassio(){
         System.out.println("Participação do Potássio no CTC: 3,0%");
         return 0;
@@ -179,5 +164,42 @@ public class Correct {
    }
    double CustoTotalHectare(double CustoPorHectare, double area_talhao){
        return CustoPorHectare * area_talhao;
+    }
+
+    //======================CORREÇÃO E RECUPERAÇÃO DO POTÁSSIO==================================================
+    double ctctotal(double dado_potassio,double dado_calcio,double dado_magnesio,double dado_hal){
+        return ((dado_potassio + dado_calcio + dado_magnesio)/dado_hal);
+    }
+    double ValorPorToneladaPotassio(
+        double cloretoDePotassio,
+        double sulfatoPotassio,
+        double sulfatoPotassio_Magnesio){
+
+            return (cloretoDePotassio + sulfatoPotassio + sulfatoPotassio_Magnesio);
+        }
+    double TeorAtingir(double potassioDesejado,double ctctotal){
+        return((potassioDesejado * ctctotal)/100) ;
+    }
+
+    double NecessitaPotassio( double potassioAtualDoSolo,double potassioDesejado){
+        return (potassioAtualDoSolo - potassioDesejado);
+    }
+    double Aproveita(double dado_potassio,double eficienciaPotassio){
+        return ((dado_potassio * 391 * 2 * 1.2)/eficienciaPotassio);
+    }
+    double QntPotassioHectare(double Aproveita,double potasioAUsar){
+        return ((Aproveita * 100)/potasioAUsar);
+    }
+    double QntPotassioAlquere(double QntPotassioHectare){
+        return (QntPotassioHectare * 2.49);
+    }
+    double CustoAlquere(double ValorPorToneladaPotassio,double QntPotassioAlquere){
+        return ((QntPotassioAlquere/100) * ValorPorToneladaPotassio);
+    }
+    double CustoHectare(double CustoAlquere){
+        return (CustoAlquere/2.42);
+    }
+    double CustoTotal(double CustoHectare,double area_talhao){
+        return (CustoHectare * area_talhao);
     }
 }
