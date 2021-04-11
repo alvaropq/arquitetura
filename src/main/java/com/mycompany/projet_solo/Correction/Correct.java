@@ -1,11 +1,10 @@
 
 package com.mycompany.projet_solo.Correction;
-
-import com.mycompany.projet_solo.Correction.PotassioCorret;
 import java.util.Scanner;
 
 public class Correct {
-    public static int main(String[] args) {
+    //public static int main(String[] args) {
+        public Correct(){
         Scanner dad = new Scanner(System.in);
 
         Double Scmol, CTCcmol, V_atual;
@@ -110,8 +109,9 @@ public class Correct {
         } else if (texSolo == 2) {
             System.out.println("De 25 a 40% de Argila");
         }
-        return sist;  
+        //return sist;  
     }
+
 
     //===============CORREÇÃO E RECUPERAÇÃO DO FOSFORO=========================================================
     double RecuperaPotassio(){
@@ -152,8 +152,8 @@ public class Correct {
    double FosforoPorHectare (double FosforoAproveitado,double fonte_fosforo){
         return (FosforoAproveitado*100/fonte_fosforo);
    }
-   double FosforoPorAlquere(double FosforoPorAlquere){
-       return (FosforoPorAlquere * 2.42);
+   double FosforoPorAlquere(double FosforoPorHectare){
+       return (FosforoPorHectare * 2.42);
 
    }
    double CustoPorAlquere(double FosforoPorAlquere, double ValorPorTonelada){
@@ -165,10 +165,14 @@ public class Correct {
    double CustoTotalHectare(double CustoPorHectare, double area_talhao){
        return CustoPorHectare * area_talhao;
     }
-
+    
+    
+    
+    
+    
     //======================CORREÇÃO E RECUPERAÇÃO DO POTÁSSIO==================================================
-    double ctctotal(double dado_potassio,double dado_calcio,double dado_magnesio,double dado_hal){
-        return ((dado_potassio + dado_calcio + dado_magnesio)/dado_hal);
+    double ctctotal(double Scmol,double dado_hal){
+        return (Scmol/dado_hal);
     }
     double ValorPorToneladaPotassio(
         double cloretoDePotassio,
