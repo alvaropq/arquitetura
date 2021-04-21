@@ -3,7 +3,6 @@ package com.mycompany.projet_solo.Correction;
 import java.util.Scanner;
 
 public class Correct {
-    //public static int main(String[] args) {
         public Correct(){
         Scanner dad = new Scanner(System.in);
 
@@ -109,104 +108,8 @@ public class Correct {
         } else if (texSolo == 2) {
             System.out.println("De 25 a 40% de Argila");
         }
-        //return sist;  
-    }
-
-
-
-    //===============CORREÇÃO E RECUPERAÇÃO DO FOSFORO=========================================================
-    double RecuperaPotassio(){
-        System.out.println("Participação do Potássio no CTC: 3,0%");
-        return 0;
- }
-    double ValorPorTonelada( 
-            double superfosfato,
-            double dap,
-            double fosfato_gafsa,
-            double escoria_thoma,
-            double superfosfato_triplo,
-            double yoorin,
-            double fosfato_daoui,
-            double acido_fosforico,
-            double map,
-            double fosfato_arad,
-            double fos_Patos_minas,
-            double multif_magnesiano){
-                
-                return (superfosfato + dap + fosfato_gafsa + escoria_thoma + 
-                superfosfato_triplo + yoorin + fosfato_daoui + acido_fosforico + map + fosfato_arad + fos_Patos_minas + multif_magnesiano);
-            }
-            
-
-    double AdicionarFosforo (double teor_fosforo, double fonte_fosforo){
-        if(teor_fosforo > 0 && fonte_fosforo > 0){
-            return (teor_fosforo - fonte_fosforo);
-        }else {
-            return 0.0;
-        }
-   }
-
-   double FosforoAproveitado(double dado_fosforo,double eficiencia_fosforo){
-        return (dado_fosforo*100/eficiencia_fosforo);
-       }
-
-   double FosforoPorHectare (double FosforoAproveitado,double fonte_fosforo){
-        return (FosforoAproveitado*100/fonte_fosforo);
-   }
-   double FosforoPorAlquere(double FosforoPorHectare){
-       return (FosforoPorHectare * 2.42);
-
-   }
-   double CustoPorAlquere(double FosforoPorAlquere, double ValorPorTonelada){
-       return ((FosforoPorAlquere/1000) * ValorPorTonelada);
-   }
-   double CustoPorHectare(double CustoPorAlquere){
-       return CustoPorAlquere /2.42;
-   }
-   double CustoTotalHectare(double CustoPorHectare, double area_talhao){
-       return CustoPorHectare * area_talhao;
-    }
-
-    
-
-// ==============================CORREÇÃO E RECUPERAÇÃO DO POTASSIO ===============
-    double ctctotal(double Scmol,double dado_hal){
-        return (Scmol/dado_hal);
-    }
-    double ValorPorToneladaPotassio(
-        double cloretoDePotassio,
-        double sulfatoPotassio,
-        double sulfatoPotassio_Magnesio){
-
-            return (cloretoDePotassio + sulfatoPotassio + sulfatoPotassio_Magnesio);
-        }
-    double TeorAtingir(double potassioDesejado,double ctctotal){
-        return((potassioDesejado * ctctotal)/100) ;
-    }
-
-    double NecessitaPotassio( double potassioAtualDoSolo,double potassioDesejado){
-        return (potassioAtualDoSolo - potassioDesejado);
-    }
-    double Aproveita(double dado_potassio,double eficienciaPotassio){
-        return ((dado_potassio * 391 * 2 * 1.2)/eficienciaPotassio);
-    }
-    double QntPotassioHectare(double Aproveita,double potasioAUsar){
-        return ((Aproveita * 100)/potasioAUsar);
-    }
-    double QntPotassioAlquere(double QntPotassioHectare){
-        return (QntPotassioHectare * 2.49);
-    }
-    double CustoAlquere(double ValorPorToneladaPotassio,double QntPotassioAlquere){
-        return ((QntPotassioAlquere/100) * ValorPorToneladaPotassio);
-    }
-    double CustoHectare(double CustoAlquere){
-        return (CustoAlquere/2.42);
-    }
-    double CustoTotal(double CustoHectare,double area_talhao){
-        return (CustoHectare * area_talhao);
-    }
-          
-    
+        
+        }    
 } 
     
     
