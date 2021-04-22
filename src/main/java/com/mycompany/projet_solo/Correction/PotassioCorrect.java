@@ -1,67 +1,167 @@
 package com.mycompany.projet_solo.Correction;
 
 public class PotassioCorrect {
+    private double area_talhao;
+    private double scmol;
+    private double dadoHal;
+    private double dado_Potassio;
     private double eficienciaPotassio;
     private double potassioAtualDoSolo;
     private double potassioDesejado;
     private double potassioAposCorrecao;
-    private double potasioAUsar;
+    private double potassioAUsar;
     private double participacaoDoPotassio;
     private double cloretoDePotassio;
     private double sulfatoPotassio;
     private double sulfatoPotassio_Magnesio;
 
-    public PotassioCorrect(
+    private PotassioCorrect(PotassioCorrectBuilder builder) {
+        this.scmol = builder.scmol;
+        this.dadoHal = builder.dadoHal;
+        this.area_talhao = builder.area_talhao;
+        this.dado_Potassio = builder.dado_Potassio;
+        this.eficienciaPotassio = builder.eficienciaPotassio;
+        this.potassioAtualDoSolo = builder.potassioAtualDoSolo;
+        this.potassioDesejado = builder.potassioDesejado;
+        this.potassioAposCorrecao = builder.potassioAposCorrecao;
+        this.potassioAUsar = builder.potassioAUsar;
+        this.participacaoDoPotassio = builder.participacaoDoPotassio;
+        this.cloretoDePotassio = builder.cloretoDePotassio;
+        this.sulfatoPotassio = builder.sulfatoPotassio;
+        this.sulfatoPotassio_Magnesio = builder.sulfatoPotassio_Magnesio;
+    }
 
+    public static class PotassioCorrectBuilder {
+        private double area_talhao;
+        private double scmol;
+        private double dadoHal;
+        private double dado_Potassio;
+        private double eficienciaPotassio;
+        private double potassioAtualDoSolo;
+        private double potassioDesejado;
+        private double potassioAposCorrecao;
+        private double potassioAUsar;
+        private double participacaoDoPotassio;
+        private double cloretoDePotassio;
+        private double sulfatoPotassio;
+        private double sulfatoPotassio_Magnesio;
 
-    
-        double eficienciaPotassio,
-        double potassioAtualDoSolo,
-        double potassioDesejado,
-        double potassioAposCorrecao,
-        double potasioAUsar,
-        double participacaoDoPotassio,
-        double cloretoDePotassio,
-        double sulfatoPotassio,
-        double sulfatoPotassio_Magnesio){
+        public PotassioCorrectBuilder setScmol(double scmol){
+            this.scmol = scmol;
+            return this;
+        }
 
+        public PotassioCorrectBuilder setDadoHal(double dadoHal){
+            this.dadoHal = dadoHal;
+            return this;
+        }
+
+        public PotassioCorrectBuilder setAreaTalhao(double area_talhao){
+            this.area_talhao = area_talhao;
+            return this;
+        }
+
+        public PotassioCorrectBuilder setDadoPotassio(double dado_Potassio){
+            this.dado_Potassio = dado_Potassio;
+            return this;
+        }
+
+        public PotassioCorrectBuilder setEficienciaPotassio(double eficienciaPotassio) {
             this.eficienciaPotassio = eficienciaPotassio;
-            this.potassioAtualDoSolo = potassioAtualDoSolo;
-            this.potassioDesejado = potassioDesejado;
-            this.potassioAposCorrecao = potassioAposCorrecao;
-            this.potasioAUsar = potasioAUsar;
-            this.participacaoDoPotassio = participacaoDoPotassio;
-            this.cloretoDePotassio = cloretoDePotassio;
-            this.sulfatoPotassio = sulfatoPotassio;
-            this.sulfatoPotassio_Magnesio = sulfatoPotassio_Magnesio;
+            return this;
         }
 
-        
-        public double getEficiencia(){
-            return eficienciaPotassio;
+        public PotassioCorrectBuilder setPotassioAtualDoSolo(double potassioAtualDoSolo) {
+            this.potassioAtualDoSolo = potassioAtualDoSolo;
+            return this;
         }
-        public double getPotassioAtual(){
-            return potassioAtualDoSolo;
+
+        public PotassioCorrectBuilder setPotassioDesejado(double potassioDesejado) {
+            this.potassioDesejado = potassioDesejado;
+            return this;
         }
-        public double getPotassioDesejado(){
-            return potassioDesejado;
+
+        public PotassioCorrectBuilder setPotassioAposCorrecao(double potassioAposCorrecao) {
+            this.potassioAposCorrecao = potassioAposCorrecao;
+            return this;
         }
-        public double getPotassioCorrecao(){
-            return potassioAposCorrecao;
+
+        public PotassioCorrectBuilder setPotassioAUsar(double potassioAUsar) {
+            this.potassioAUsar = potassioAUsar;
+            return this;
         }
-        public double getPotassioUsar(){
-            return potasioAUsar;
+
+        public PotassioCorrectBuilder setParticipacaoDoPotassio(double participacaoDoPotassio) {
+            this.participacaoDoPotassio = participacaoDoPotassio;
+            return this;
         }
-        public double getParticipa(){
-            return participacaoDoPotassio;
+
+        public PotassioCorrectBuilder setCloretoDePotassio(double cloretoDePotassio) {
+            this.cloretoDePotassio = cloretoDePotassio;
+            return this;
         }
-        public double getCloreto(){
-            return cloretoDePotassio;
+
+        public PotassioCorrectBuilder setSulfatoPotassio(double sulfatoPotassio) {
+            this.sulfatoPotassio = sulfatoPotassio;
+            return this;
         }
-        public double getSulfatoPotassio(){
-            return sulfatoPotassio;
+
+        public PotassioCorrectBuilder setSulfatoPotassio_Magnesio(double sulfatoPotassio_Magnesio) {
+            this.sulfatoPotassio_Magnesio = sulfatoPotassio_Magnesio;
+            return this;
         }
-        public double getSulfPotassioMag(){
-            return sulfatoPotassio_Magnesio;
+
+        public PotassioCorrect builder() {
+            return new PotassioCorrect(this);
         }
+    }
+    public double getScmol(){
+        return scmol;
+    }
+    public double getDadoHal(){
+        return dadoHal;
+    }
+
+    public double getAreaTalhao(){
+        return area_talhao;
+    }
+    public double getDadoPotassio(){
+        return dado_Potassio;
+    }
+
+    public double getEficienciaPotassio() {
+        return eficienciaPotassio;
+    }
+
+    public double getPotassioAtualDoSolo() {
+        return potassioAtualDoSolo;
+    }
+
+    public double getPotassioDesejado() {
+        return potassioDesejado;
+    }
+
+    public double getPotassioCorrecao() {
+        return potassioAposCorrecao;
+    }
+
+    public double getPotassioUsar() {
+        return potassioAUsar;
+    }
+
+    public double getParticipa() {
+        return participacaoDoPotassio;
+    }
+
+    public double getCloretoDePotassio() {
+        return cloretoDePotassio;
+    }
+
+    public double getSulfatoPotassio() {
+        return sulfatoPotassio;
+    }
+
+    public double getSulfPotassioMag() {
+        return sulfatoPotassio_Magnesio;
+    }
 }

@@ -20,41 +20,144 @@ public class FosforoCorrect {
     private double fos_Patos_minas;
     private double multif_magnesiano;
 
-    public FosforoCorrect(double area_talhao, double teor_fosforo, double fonte_fosforo, double eficiencia_fosforo,
-            double custo_hectare, double superfosfato, double dap, double fosfato_gafsa, double escoria_thoma,
-            double superfosfato_triplo, double yoorin, double fosfato_daoui, double acido_fosforico, double map,
-            double fosfato_arad, double fos_Patos_minas, double multif_magnesiano) {
-
-        this.area_talhao = area_talhao;
-        this.teor_fosforo = teor_fosforo;
-        this.fonte_fosforo = fonte_fosforo;
-        this.eficiencia_fosforo = eficiencia_fosforo;
-        this.custo_hectare = custo_hectare;
-        this.superfosfato = superfosfato;
-        this.dap = dap;
-        this.fosfato_gafsa = fosfato_gafsa;
-        this.escoria_thoma = escoria_thoma;
-        this.superfosfato_triplo = superfosfato_triplo;
-        this.yoorin = yoorin;
-        this.fosfato_daoui = fosfato_daoui;
-        this.acido_fosforico = acido_fosforico;
-        this.map = map;
-        this.fosfato_arad = fosfato_arad;
-        this.fos_Patos_minas = fos_Patos_minas;
-        this.multif_magnesiano = multif_magnesiano;
+    private FosforoCorrect(FosforoCorrectBuilder builder) {
+        this.area_talhao = builder.area_talhao;
+        this.teor_fosforo = builder.teor_fosforo;
+        this.fonte_fosforo = builder.fonte_fosforo;
+        this.eficiencia_fosforo = builder.eficiencia_fosforo;
+        this.custo_hectare = builder.custo_hectare;
+        this.superfosfato = builder.superfosfato;
+        this.dap = builder.dap;
+        this.fosfato_gafsa = builder.fosfato_gafsa;
+        this.escoria_thoma = builder.escoria_thoma;
+        this.superfosfato_triplo = builder.superfosfato_triplo;
+        this.yoorin = builder.yoorin;
+        this.fosfato_daoui = builder.fosfato_daoui;
+        this.acido_fosforico = builder.acido_fosforico;
+        this.map = builder.map;
+        this.fosfato_arad = builder.fosfato_arad;
+        this.fos_Patos_minas = builder.fos_Patos_minas;
+        this.multif_magnesiano = builder.multif_magnesiano;
     }
 
-   
+    public static class FosforoCorrectBuilder {
+        private double area_talhao;
+        private double teor_fosforo;
+        private double fonte_fosforo;
+        private double eficiencia_fosforo;
+        private double custo_hectare;
+        private double superfosfato;
+        private double dap;
+        private double fosfato_gafsa;
+        private double escoria_thoma;
+        private double superfosfato_triplo;
+        private double yoorin;
+        private double fosfato_daoui;
+        private double acido_fosforico;
+        private double map;
+        private double fosfato_arad;
+        private double fos_Patos_minas;
+        private double multif_magnesiano;
+
+        public FosforoCorrectBuilder setAreaTalhao(double area_talhao) {
+            this.area_talhao = area_talhao;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setTeorFosforo(double teor_fosforo) {
+            this.teor_fosforo = teor_fosforo;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setFonteFosforo(double fonte_fosforo) {
+            this.fonte_fosforo = fonte_fosforo;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setEficienciaFosforo(double eficiencia_fosforo) {
+            this.eficiencia_fosforo = eficiencia_fosforo;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setCustoHectare(double custo_hectare) {
+            this.custo_hectare = custo_hectare;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setSuperFosfato(double superfosfato) {
+            this.superfosfato = superfosfato;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setDap(double dap) {
+            this.dap = dap;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setFosfatoGafsa(double fosfato_gafsa) {
+            this.fosfato_gafsa = fosfato_gafsa;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setEscoriaThoma(double escoria_thoma) {
+            this.escoria_thoma = escoria_thoma;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setSuperFosfatoTriplo(double superfosfato_triplo) {
+            this.superfosfato_triplo = superfosfato_triplo;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setYoorin(double yoorin) {
+            this.yoorin = yoorin;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setFosfatoDaoui(double fosfato_daoui) {
+            this.fosfato_daoui = fosfato_daoui;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setAcidoFosforico(double acido_fosforico) {
+            this.acido_fosforico = acido_fosforico;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setMap(double map) {
+            this.map = map;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setFosfatoArad(double fosfato_arad) {
+            this.fosfato_arad = fosfato_arad;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setFosfatoPatosMinas(double fos_Patos_minas) {
+            this.fos_Patos_minas = fos_Patos_minas;
+            return this;
+        }
+
+        public FosforoCorrectBuilder setMultiMagnesio(double multif_magnesiano) {
+            this.multif_magnesiano = multif_magnesiano;
+            return this;
+        }
+
+        public FosforoCorrect builder() {
+            return new FosforoCorrect(this);
+        }
+    }
 
     public double getTalhao() {
         return area_talhao;
     }
 
-    public double getTeor() {
+    public double getTeorFosforo() {
         return teor_fosforo;
     }
 
-    public double getFonte() {
+    public double getFonteFosforo() {
         return fonte_fosforo;
     }
 
