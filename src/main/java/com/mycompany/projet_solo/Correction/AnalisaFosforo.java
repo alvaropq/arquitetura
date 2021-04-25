@@ -46,11 +46,7 @@ public class AnalisaFosforo {
         return CustoPorAlquere / 2.42;
     }
 
-    double CustoTotalHectare(double CustoPorHectare, FosforoCorrect fosforo) {
-        return CustoPorHectare * fosforo.getTalhao();
-    }
-
-    
-
-    
+    double CustoTotalHectare(double CustoPorHectare) {
+        return ((CustoPorHectare * 100) / 4.84 );
+    }   
 }

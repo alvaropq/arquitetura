@@ -1,7 +1,6 @@
 package com.mycompany.projet_solo.Correction;
 
 public class PotassioCorrect {
-    private double area_talhao;
     private double scmol;
     private double dadoHal;
     private double dado_Potassio;
@@ -18,7 +17,6 @@ public class PotassioCorrect {
     private PotassioCorrect(PotassioCorrectBuilder builder) {
         this.scmol = builder.scmol;
         this.dadoHal = builder.dadoHal;
-        this.area_talhao = builder.area_talhao;
         this.dado_Potassio = builder.dado_Potassio;
         this.eficienciaPotassio = builder.eficienciaPotassio;
         this.potassioAtualDoSolo = builder.potassioAtualDoSolo;
@@ -32,7 +30,6 @@ public class PotassioCorrect {
     }
 
     public static class PotassioCorrectBuilder {
-        private double area_talhao;
         private double scmol;
         private double dadoHal;
         private double dado_Potassio;
@@ -53,11 +50,6 @@ public class PotassioCorrect {
 
         public PotassioCorrectBuilder setDadoHal(double dadoHal){
             this.dadoHal = dadoHal;
-            return this;
-        }
-
-        public PotassioCorrectBuilder setAreaTalhao(double area_talhao){
-            this.area_talhao = area_talhao;
             return this;
         }
 
@@ -120,10 +112,6 @@ public class PotassioCorrect {
     }
     public double getDadoHal(){
         return dadoHal;
-    }
-
-    public double getAreaTalhao(){
-        return area_talhao;
     }
     public double getDadoPotassio(){
         return dado_Potassio;

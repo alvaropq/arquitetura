@@ -79,11 +79,8 @@ public class NewEmptyJUnitTest {
     }
     @Test
     public void testCustoTotalHectare(){
-        FosforoCorrect fosforo = new FosforoCorrect.FosforoCorrectBuilder()
-                                                .setAreaTalhao(5.5)
-                                                .builder();
         assertEquals(124.999998,
-        new AnalisaFosforo().CustoTotalHectare(22.7272723, fosforo));
+        new AnalisaFosforo().CustoTotalHectare(22.7272723));
     }
 
     //              TESTA POTASSIO
@@ -157,10 +154,7 @@ public class NewEmptyJUnitTest {
      }
      @Test
      public void testCustoTotal(){
-        PotassioCorrect potassio = new PotassioCorrect.PotassioCorrectBuilder()
-                                                        .setAreaTalhao(5.5)
-                                                        .builder();
          assertEquals(0.3981818,
-            new AnalisaPotassio().CustoTotal(0.07239669,potassio));
+            new AnalisaPotassio().CustoTotal(0.07239669));
      }
 }

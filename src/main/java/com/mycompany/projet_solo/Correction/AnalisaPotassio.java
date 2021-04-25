@@ -43,8 +43,8 @@ public class AnalisaPotassio {
         return (CustoAlquere / 2.42);
     }
 
-    double CustoTotal(double CustoHectare, PotassioCorrect potassio) {
-        return (CustoHectare * potassio.getAreaTalhao());
+    double CustoTotal(double CustoHectare) {
+        return ((CustoHectare * 100)/ 4.84);
     }
 
 }
