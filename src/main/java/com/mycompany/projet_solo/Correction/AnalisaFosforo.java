@@ -2,31 +2,13 @@ package com.mycompany.projet_solo.Correction;
 
 public class AnalisaFosforo {
 
-        double ValorPorTonelada(FosforoCorrect fosforo){
-            return (fosforo.getSuperfosfato()
-                        + fosforo.getDap()
-                        + fosforo.getFosfatoGafsa()
-                        + fosforo.getEscoria()
-                        + fosforo.getSuperTriplo()
-                        + fosforo.getYoorin()
-                        + fosforo.getFosfatoDaoui()
-                        + fosforo.getAcidoFosforico()
-                        + fosforo.getMap()
-                        + fosforo.getFosfatoArad()
-                        + fosforo.getFosPatosMina()
-                        + fosforo.getMultiMagnesiano());
-        }
-
-    double AdicionarFosforo(FosforoCorrect fosforo) {
-        if (fosforo.getTeorFosforo() > 0 && fosforo.getFonteFosforo() > 0) {
-            return (fosforo.getTeorFosforo() - fosforo.getFonteFosforo());
+    double NecessidadeDeAdicionarFosforo(FosforoCorrect fosforo,EquilibrioCorrect equilibrio) {
+        if (fosforo.getTeorFosforo() > 0 && equilibrio.getDadoFosforo() > 0) {
+            return (fosforo.getTeorFosforo() - equilibrio.getDadoFosforo());
         } else {
+            System.out.print("Não Necessita adicionar");
             return 0.0;
         }
-    }
-
-    double FosforoAproveitado(double dado_fosforo, FosforoCorrect fosforo) {
-        return (dado_fosforo * 100 / fosforo.getEficienciaFosforo());
     }
 
     double FosforoPorHectare(double FosforoAproveitado, FosforoCorrect fosforo) {
