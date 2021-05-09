@@ -13,7 +13,7 @@ public class EquilibrioCorrect {
     private double dadoAluminio;
     private double dadoHal;
 
-    private EquilibrioCorrect(EquilibrioCorrectBuilder builder){
+    EquilibrioCorrect(EquilibrioCorrectBuilder builder){
         this.materiaOrganica = builder.materiaOrganica;
         this.carbono = builder.carbono;
         this.texturaDoSolo = builder.texturaDoSolo;
@@ -39,7 +39,7 @@ public class EquilibrioCorrect {
         private double dadoEnxofre;
         private double dadoAluminio;
         private double dadoHal;
-
+        
         public EquilibrioCorrectBuilder setMateriaOrganica(double materiaOrganica){
             this.materiaOrganica = materiaOrganica;
             return this;

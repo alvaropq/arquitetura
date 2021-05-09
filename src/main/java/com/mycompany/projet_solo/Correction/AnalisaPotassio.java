@@ -1,9 +1,8 @@
 package com.mycompany.projet_solo.Correction;
 
 public class AnalisaPotassio {
-    double RecuperaPotassio() {
-        System.out.println("Participação do Potássio no CTC: 3,0%");
-        return 0;
+    String RecuperaPotassio() { 
+        return "Participação do Potássio no CTC: 3,0%";
     }
 
     double Ctctotal(PotassioCorrect potassio) {

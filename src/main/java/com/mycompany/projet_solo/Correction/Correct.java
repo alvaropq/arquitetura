@@ -2,7 +2,7 @@
 package com.mycompany.projet_solo.Correction;
 
 public class Correct {
-      
+    
 
         int Textura(EquilibrioCorrect equilibrio){
             if(equilibrio.getTexturaDoSolo() == 1){

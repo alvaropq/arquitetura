@@ -14,7 +14,7 @@ public class PotassioCorrect {
     private double sulfatoPotassio;
     private double sulfatoPotassio_Magnesio;
 
-    private PotassioCorrect(PotassioCorrectBuilder builder) {
+    PotassioCorrect(PotassioCorrectBuilder builder) {
         this.scmol = builder.scmol;
         this.dadoHal = builder.dadoHal;
         this.dado_Potassio = builder.dado_Potassio;
